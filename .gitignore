@@ -24,5 +24,6 @@ dist-ssr
 *.sw?
 
 # Vite
-.vite
-.vite/deps
+.vite/deps/
+node_modules/
+
