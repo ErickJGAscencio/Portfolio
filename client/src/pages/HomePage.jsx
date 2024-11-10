@@ -19,6 +19,10 @@ function Home() {
             <p className='text-sm'>21 years</p>
             <p className='text-sm'>I'm Spiderman, but don´t tell anyone.</p>
           </div>
+          <button className='bg-color_header pl-3 pr-3 p-2 rounded-3xl m-5 hover:bg-color_border text-white'
+              onClick={() => window.open('https://www.linkedin.com/in/erick-jes%C3%BAs-guzm%C3%A1n-ascencio-60a068159/')}>
+              LinkedIn
+            </button>
         </div>
         {/* Abour me */}
         <div>
