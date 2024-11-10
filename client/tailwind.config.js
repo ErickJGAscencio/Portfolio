@@ -11,8 +11,8 @@ export default {
         'color_body': '#c4d49c',
         'color_border': '#5d7d15',
         'color_footer': '#383434',
-        'color_background':'#38343c',
-        'color_card':'#3d3e42',
+        'color_background':'#3e3f49',
+        'color_card':'#5e5f69',
         'color_hover_card':'#f0bf6c',
       },
       boxShadow: {
