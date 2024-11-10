@@ -22,11 +22,11 @@ function Home() {
     <div className='text-white flex flex-col bg-color_background min-h-screen'>
       {/* Header */}
       <div className='flex justify-between items-center p-4 md:px-10'>
-        <p className='text-xl font-bold'>Erick Ascencio</p>
+        <p className='text-sm lg:text-xl font-bold'>Erick Ascencio</p>
         <div className='flex space-x-4 gap-2'>
-          <a className='w-auto text-white cursor-pointer hover:underline'>About me</a>
-          <a className='w-auto text-white cursor-pointer hover:underline'>Portfolio</a>
-          <a className='w-auto text-white cursor-pointer hover:underline'>Contact</a>
+          <a className='w-auto text-white cursor-pointer hover:underline text-sm lg:text-sm'>About me</a>
+          <a className='w-auto text-white cursor-pointer hover:underline text-sm lg:text-sm'>Portfolio</a>
+          <a className='w-auto text-white cursor-pointer hover:underline text-sm lg:text-sm'>Contact</a>
         </div>
       </div>
 
@@ -40,11 +40,11 @@ function Home() {
           <p className='text-sm md:text-base'>21 years</p>
           <p className='text-sm md:text-base'>I'm Spiderman, but don't tell anyone.</p>
           <div className='mt-4'>
-            <button className='bg-color_header px-4 py-2 rounded-3xl m-2 hover:bg-color_border text-white'
+            <button className='bg-color_card border px-4 py-2 rounded-3xl m-2 hover:color_hover_card text-white'
               onClick={() => window.open('https://www.linkedin.com/in/erick-jes%C3%BAs-guzm%C3%A1n-ascencio-60a068159/')}>
               LinkedIn
             </button>
-            <button className='bg-color_header px-4 py-2 rounded-3xl m-2 hover:bg-color_border text-white'
+            <button className='bg-color_card border px-4 py-2 rounded-3xl m-2 hover:color_hover_card text-white'
               onClick={() => window.open('https://www.linkedin.com/in/erick-jes%C3%BAs-guzm%C3%A1n-ascencio-60a068159/')}>
               WhatsApp
             </button>
@@ -53,23 +53,31 @@ function Home() {
       </div>
 
       {/* About me */}
-      <div className='text-white px-10 py-5'>
+      <div className='text-white px-10 py-5 
+                      lg:px-20'>
         <div className='font-bold text-xl py-5'>About me</div>
         <p className='text-left px-5 max-w-screen-md'>
           Enthusiastic about web development from backend to frontend, handling Django and React to make ideas come true. I like to try new technologies and software development methods.
         </p>
-        <button className='w-36 bg-color_header px-3 py-2 rounded-3xl m-5 hover:bg-color_border text-white'>
+        <button className='w-36 bg-color_card border px-3 py-2 rounded-3xl m-5 hover:bg-color_hover_card text-white'>
           Download CV
         </button>
       </div>
 
       {/* Skills */}
-      <div className='text-white px-10 py-5'>
+      <div className='text-white px-10 py-5
+                      lg:px-20'>
         <div className='font-bold text-xl py-5'>My Skills</div>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5'>
+        <div className='px-0 grid grid-cols-2
+                  sm:grid-cols-2
+                  md:grid-cols-3
+                  lg:grid-cols-4 lg:px-40
+                  gap-5
+                  justify-center items-center'>
           {skills.map((skill, index) => (
-            <div key={index} className='w-64 bg-color_card hover:bg-color_hover_card rounded-xl p-5 flex flex-col items-center'>
-              <img src={skill.imageUrl} alt={skill.name} className='w-12 h-12 m-5' />
+            <div key={index} className='w-32 h-32 bg-color_card hover:bg-color_hover_card rounded-xl p-5 flex flex-col text-center items-center
+                                      sm:w-40 sm:h-40'>
+              <img src={skill.imageUrl} alt={skill.name} className='w-12 h-12 m-1 lg:m-5'/>
               <p>{skill.name}</p>
             </div>
           ))}
@@ -77,11 +85,11 @@ function Home() {
       </div>
 
       {/* Portfolio */}
-      <div className='p-5'>
+      <div className='px-10 lg:px-20'>
         <div className='font-bold text-xl py-5'>Portfolio</div>
         <div className='rounded-xl border p-5'>
           <p>Workcloud</p>
-          <button className='bg-color_header px-4 py-2 rounded-3xl mt-5 hover:bg-color_border text-white'
+          <button className='bg-color_card border px-4 py-2 rounded-3xl mt-5 hover:bg-color_hover_card text-white'
             onClick={() => window.open('https://workcloud.onrender.com')}>
             View page
           </button>
@@ -89,12 +97,12 @@ function Home() {
       </div>
 
       {/* Experience */}
-      <div className='p-5'>
+      <div className='px-10 lg:px-20'>
         <div className='font-bold text-xl py-5'>Experience</div>
       </div>
 
       {/* Contact me */}
-      <div className='p-5'>
+      <div className='px-10 lg:px-20'>
         <div className='font-bold text-xl py-5'>Contact me</div>
       </div>
     </div>
