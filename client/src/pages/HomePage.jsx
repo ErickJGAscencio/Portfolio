@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Home() {
-  const pro = ['Django', 'Python', 'REST APIs', 'React', 'JavaScript', 'HTML5', 'CSS3', 'PostgreSQL', 'SQL', 'Git', 'Tailwind CSS', 'Unit Testing', ];
+  const pro = ['Django', 'Python', 'REST APIs', 'React', 'JavaScript', 'HTML5', 'CSS3', 'PostgreSQL', 'SQL', 'Git', 'Tailwind CSS', 'Unit Testing',];
 
   return (
     <div className='flex-col'>
@@ -43,8 +43,15 @@ function Home() {
         {/* Project */}
         <div className='p-5'>
           <div className='font-bold text-xl p-5'>Projects</div>
-          <p className='rounded-xl border pl-3 pr-3'>Workcloud</p>
+          <div className='rounded-xl border pl-3 pr-3'>
+            <p>Workcloud</p>
+            <button className='bg-color_header pl-3 pr-3 p-2 rounded-3xl m-5 hover:bg-color_border text-white'
+              onClick={() => window.open('https://workcloud.onrender.com')}>
+              View page
+            </button>
+          </div>
         </div>
+
       </div>
       <div className='flex-col bg-color_footer text-white text-center p-5'>
         <h4 className='text-xl font-bold'>Contact</h4>
