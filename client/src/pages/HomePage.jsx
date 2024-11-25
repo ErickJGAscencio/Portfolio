@@ -4,7 +4,8 @@ function Home() {
   const skills = [
     { name: 'Django', imageUrl: '/Django.png' },
     { name: 'Python', imageUrl: '/Python.png' },
-    { name: 'REST APIs', imageUrl: '/path/to/restapis.png' },
+    { name: 'PyTest', imageUrl: '/Python.png' },
+    { name: 'RESTfull', imageUrl: '/path/to/restapis.png' },
     { name: 'SQL', imageUrl: '/path/to/sql.png' },
     { name: 'PostgreSQL', imageUrl: '/path/to/postgresql.png' },
     { name: 'React', imageUrl: 'React.png' },
@@ -12,7 +13,7 @@ function Home() {
     { name: 'HTML5', imageUrl: '/Html.png' },
     { name: 'CSS3', imageUrl: '/Css.png' },
     { name: 'Tailwind CSS', imageUrl: '/Tailwind.png' },
-    { name: 'Git Source Control', imageUrl: '/Git.png' },
+    { name: 'Source Control', imageUrl: '/Git.png' },
     { name: 'Unit Testing', imageUrl: '/path/to/unittesting.png' }
   ]
 
@@ -37,7 +38,7 @@ function Home() {
           <p className='text-4xl md:text-5xl font-bold'>I'm <span className='text-color_hover_card'>Erick Ascencio</span></p>
           <p className='text-lg md:text-xl'>Fullstack Developer</p>
           <p className='text-sm md:text-base'>Tabasco, Mexico</p>
-          <p className='text-sm md:text-base'>21 years</p>
+          <p className='text-sm md:text-base'>23 years</p>
           <p className='text-sm md:text-base'>I'm Spiderman, but don't tell anyone.</p>
           <div className='mt-4'>
             <button className='bg-color_card border px-4 py-2 rounded-3xl m-2 hover:color_hover_card text-white'
@@ -65,23 +66,17 @@ function Home() {
       </div>
 
       {/* Skills */}
-      <div className='text-white px-10 py-5
-                      lg:px-20'>
+      <div className='text-white px-10 py-5 lg:px-20'>
         <div className='font-bold text-xl py-5'>My Skills</div>
-        <div className='px-0 grid grid-cols-2
-                  sm:grid-cols-2
-                  md:grid-cols-3
-                  lg:grid-cols-4 lg:px-40
-                  gap-5
-                  justify-center items-center'>
-          {skills.map((skill, index) => (
-            <div key={index} className='w-32 h-32 bg-color_card hover:bg-color_hover_card rounded-xl p-5 flex flex-col text-center items-center
-                                      sm:w-40 sm:h-40'>
-              <img src={skill.imageUrl} alt={skill.name} className='w-12 h-12 m-1 lg:m-5'/>
-              <p>{skill.name}</p>
-            </div>
-          ))}
-        </div>
+        <div className='grid gap-5 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center items-center px-0 lg:px-40 place-items-center'>
+  {skills.map((skill, index) => (
+    <div key={index} className='w-32 h-32 sm:w-40 sm:h-40 bg-color_card hover:bg-color_hover_card rounded-xl p-5 flex flex-col text-center items-center'>
+      <img src={skill.imageUrl} alt={skill.name} className='w-12 h-12 lg:w-16 lg:h-16 m-1 lg:m-5' />
+      <p>{skill.name}</p>
+    </div>
+  ))}
+</div>
+
       </div>
 
       {/* Portfolio */}

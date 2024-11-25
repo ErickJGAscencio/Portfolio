@@ -13,7 +13,11 @@ export default {
         'color_footer': '#383434',
         'color_background':'#3e3f49',
         'color_card':'#5e5f69',
-        'color_hover_card':'#f0bf6c',
+        'color_hover_card': '#f0bf6c',
+        background: 'rgb(var(--background) / <alpha-value>)',
+        foreground: 'rgb(var(--foreground) / <alpha-value>)',
+        accent: 'rgb(var(--accent) / <alpha-value>)',
+        card: 'rgb(var(--card) / <alpha-value>)'
       },
       boxShadow: {
         'blur-lg': '0 4px 15px rgba(0, 0, 0, 0.2)',

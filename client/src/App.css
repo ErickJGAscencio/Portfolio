@@ -1,42 +1,66 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 237 249 253; /* Azul muy claro, suave y cómodo */
+  --foreground: 20 33 50; /* Azul oscuro para texto principal, con suficiente contraste */
+  --accent: 0 102 204; /* Azul medio/brillante para destacar elementos */
+  --card: 220 230 240; /* Azul grisáceo claro para*/
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.dark {
+  --background: 15 15 20; /* Gris muy oscuro casi negro */
+  --foreground: 230 230 240; /* Blanco suave para texto */
+  --accent: 100 210 255; /* Azul brillante como color destacado */
+  --card: 30 30 40; /* Gris oscuro para tarjetas */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+
+
+@layer base {
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
   }
 }
 
-.card {
-  padding: 2em;
+html {
+  scroll-behavior: smooth;
 }
 
-.read-the-docs {
-  color: #888;
-} */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-accent rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-accent/80;
+}
+
