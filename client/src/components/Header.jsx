@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link }from 'react-router-dom'
 import ThemeToggle from './ThemeToggle'
 
 export default function Header() {
@@ -10,9 +11,9 @@ export default function Header() {
           <ul className="flex space-x-4">
             {['Sobre mí', 'Habilidades', 'Proyectos', 'Experiencia', 'Contacto'].map((item) => (
               <li key={item}>
-                {/* <Link href={`#${item.toLowerCase().replace(' ', '-')}`} className="hover:text-[#f0bf6c] transition-colors"> */}
+                <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="hover:text-[#f0bf6c] transition-colors cursor-pointer">
                   {item}
-                {/* </Link> */}
+                </a>
               </li>
             ))}
           </ul>

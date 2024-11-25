@@ -4,7 +4,7 @@ const projects = [
   {
     name: 'Workcloud',
     description: 'Una plataforma de gestión de proyectos colaborativa.',
-    image: 'public/projects-images/Wc1.jpg',
+    image: '/projects-images/Wc1.jpg',
     github: 'https://github.com/ErickJGAscencio/To-Do-List',
     live: 'https://workcloud.onrender.com',
   },
