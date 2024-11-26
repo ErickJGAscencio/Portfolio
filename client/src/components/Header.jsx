@@ -9,7 +9,7 @@ export default function Header() {
         <h1 className="text-2xl font-bold">Erick Ascencio</h1>
         <nav className="flex items-center space-x-4">
           <ul className="flex space-x-4">
-            {['Sobre mí', 'Habilidades', 'Proyectos', 'Experiencia', 'Contacto'].map((item) => (
+            {['About me', 'Habilidades', 'Proyectos', 'Experiencia', 'Contacto'].map((item) => (
               <li key={item}>
                 <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="hover:text-[#f0bf6c] transition-colors cursor-pointer">
                   {item}
