@@ -52,7 +52,7 @@ export default function Experience() {
             </div>
             <div className="flex mt-5 gap-5">
               <button href={exp.tech.url} className="underline cursor-pointer hover:font-bold">See project</button>
-              {exp.tech.urlGit (
+              {exp.tech.urlGit !== "" && (
                 <button href={exp.tech.urlGit} className="underline cursor-pointer hover:font-bold">See GitHub</button>
               )}
             </div>
