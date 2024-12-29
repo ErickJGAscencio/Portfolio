@@ -21,7 +21,7 @@ const experiences = [
     title: 'Desarrollador Backend',
     company: 'Universidad Juárez Autónoma de Tabasco',
     period: 'Nov-23 / Abr-24',
-    description: 'Colaboré en el desarrollo y mantenimiento de sitios web con herramientas modernas y APIs. Implementé adaptaciones en PHP, perfeccioné sistemas de API con Postman y optimicé la escalabilidad y seguridad del sistema.CORREGIR',
+    description: 'Colaboré en el desarrollo y mantenimiento de sitios web con herramientas modernas y APIs. Implementé adaptaciones en PHP, perfeccioné sistemas de API con Postman y optimicé la escalabilidad y seguridad del sistema.',
     tech: ['PHP'],
     url: '',
     urlGit: ''
