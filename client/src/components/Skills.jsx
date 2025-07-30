@@ -1,31 +1,6 @@
 import React from 'react';
-import { FaCode, FaCss3Alt, FaDatabase, FaGit, FaGithub, FaHtml5, FaJsSquare, FaPlus, FaPython, FaReact, FaTable } from "react-icons/fa";
+import { FaAtom, FaCss3Alt, FaGit, FaGithub, FaHtml5, FaJsSquare, FaNodeJs, FaPlus, FaPython, FaReact } from "react-icons/fa";
 
-const skills = [
-  {
-    name: 'Frontend',
-    icon: FaTable,
-    technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Tailwind CSS']
-  },
-  {
-    name: 'Backend',
-    icon: FaDatabase,
-    technologies: ['Python', 'Django', 'PyTest', 'SQL', 'Postgres']
-  },
-  {
-    name: 'Otros',
-    icon: FaCode,
-    technologies: ['Git', 'RESTful APIs', 'PyTest']
-  },
-];
-
-const techDetails = {
-  HTML: { name: 'HTML', icon: <FaHtml5 /> },
-  CSS: { name: 'CSS', icon: <FaCss3Alt /> },
-  JavaScript: { name: 'JavaScript', icon: <FaJsSquare /> },
-  React: { name: 'React', icon: <FaReact /> }, // Asegúrate de importar FaReact si es necesario
-  'Tailwind CSS': { name: 'Tailwind CSS', icon: <FaPlus /> } // Asegúrate de importar SiTailwindcss si es necesario
-};
 
 const Wa = [
   {
@@ -34,8 +9,8 @@ const Wa = [
       HTML: { name: 'HTML', icon: <FaHtml5 /> },
       CSS: { name: 'CSS', icon: <FaCss3Alt /> },
       JavaScript: { name: 'JavaScript', icon: <FaJsSquare /> },
-      React: { name: 'React', icon: <FaReact /> },
-      'Tailwind CSS': { name: 'Tailwind CSS', icon: <FaPlus /> }
+      React: { name: 'ReactJs', icon: <FaReact /> },
+      Tailwind: { name: 'Tailwind', icon: <FaPlus /> }
     }
   },
   {
@@ -43,6 +18,14 @@ const Wa = [
     technologies: {
       Django: { name: 'Django', icon: <FaHtml5 /> },
       Python: { name: 'Python', icon: <FaPython /> },
+      NodeJs: { name: 'NodeJs', icon: <FaNodeJs /> },
+    }
+  },
+  {
+    name: 'Mobile',
+    technologies: {
+      ReactNative: { name: 'React Native', icon: <FaReact /> },
+      Ionic: { name: 'Ionic', icon: <FaAtom /> },
     }
   },
   {
@@ -56,6 +39,7 @@ const Wa = [
 ];
 
 console.log(Wa);
+
 export default function Skills() {
   return (
     <section id="habilidades" className="py-20 animate-fade-in">

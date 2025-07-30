@@ -18,6 +18,15 @@ const experiences = [
   //   urlGit: 'github.com'
   // },
   {
+    title: 'Desarrollador Móvil - En la actualidad',
+    company: 'Coordinación de Modernización Administrativa e Innovación Gubernamental (CGMAIG)',
+    period: 'May-15 / ~',
+    description: 'Trabajé en el desarrollo de aplicaciones móviles para el estado de Tabasco, principalmente en ABIM Tabasco, una aplicación para mantener un registro de los bienes muebles de las dependencias gubernamentales. Además de presentar una propuesta visual nueva para la nueva interfaz actualmente utilizada.',
+    tech: ['React Native', 'Node Js'],
+    url: '',
+    urlGit: ''
+  },
+  {
     title: 'Desarrollador Backend',
     company: 'Universidad Juárez Autónoma de Tabasco',
     period: 'Nov-23 / Abr-24',
@@ -26,6 +35,15 @@ const experiences = [
     url: '',
     urlGit: ''
   },
+  // {
+  //   title: 'Desarrollador FullStack',
+  //   company: 'Creative Web Solutions',
+  //   period: 'Junio 2019 - Diciembre 2020',
+  //   description: 'Creación de interfaces de usuario responsivas y accesibles utilizando React y Next.js.',
+  //   tech: ['Python', 'Django'],
+  //   url: 'google.com',
+  //   urlGit: 'github.com'
+  // },
 ];
 
 

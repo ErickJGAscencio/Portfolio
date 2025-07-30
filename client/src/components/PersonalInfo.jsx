@@ -10,10 +10,10 @@ export default function PersonalInfo() {
       <div className="text-center md:text-left animate-slide-up">
         <p className='text-4xl md:text-5xl font-bold'>Soy <span className='text-color_hover_card'>Erick Ascencio</span></p>
         <p className='text-lg md:text-xl'>Desarrollador Fullstack</p>
-        <p className="text-[#f0bf6c]">Trabajando con Django y React</p>
+        <p className="text-[#f0bf6c]">Trabajando con Django, React</p>
+        <p className="text-[#f0bf6c]">y React Native</p>
         <p className='text-sm md:text-base'>Tabasco, Mexico</p>
-        <p className='text-sm md:text-base'>23 años</p>
-        <p className='text-sm md:text-base'>No le cuentes a nadie pero,.. soy Spiderman.</p>
+        <p className='text-sm md:text-base'>24 años</p>
         <div className='flex p-1 gap-5'>
           <button><FaGithub /></button>
           <button><FaLinkedin /></button>
