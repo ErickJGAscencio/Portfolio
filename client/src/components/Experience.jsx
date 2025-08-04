@@ -2,20 +2,13 @@ import { Award, Zap } from "lucide-react";
 
 const experiences = [
   {
-    title: "Desarrollador Móvil - En la actualidad",
-    company:
-      "Coordinación de Modernización Administrativa e Innovación Gubernamental (CGMAIG)",
-    period: "May-15 / ~",
-    description:
-      "Trabajé en el desarrollo de aplicaciones móviles para el estado de Tabasco, principalmente en ABIM Tabasco, una aplicación para mantener un registro de los bienes muebles de las dependencias gubernamentales. Además de presentar una propuesta visual nueva para la nueva interfaz actualmente utilizada.",
-    tech: ["React Native", "Node Js"],
-    achievements: [
-      "Diseñé e implementé una interfaz móvil moderna más intuitiva para ABIM Tabasco",
-      // "Integré funcionalidades de registro y consulta de bienes en tiempo real vía API segura",
-      "Aseguré compatibilidad y estabilidad en múltiples versiones de Android",
-      "Propuse mejoras visuales que fueron adoptadas como base para la versión oficial",
-      "Brindé soporte técnico post-despliegue y seguimiento de uso institucional",
-    ],
+    title: 'Desarrollador Móvil - En la actualidad',
+    company: 'Coordinación de Modernización Administrativa e Innovación Gubernamental (CGMAIG)',
+    period: 'May-15 / ~',
+    description: 'Trabajé en el desarrollo de aplicaciones móviles para el estado de Tabasco, principalmente en ABIM Tabasco, una aplicación para mantener un registro de los bienes muebles de las dependencias gubernamentales. Además de presentar una propuesta visual nueva para la nueva interfaz actualmente utilizada.',
+    tech: ['React Native', 'Node Js'],
+    url: '',
+    urlGit: ''
   },
   {
     title: "Desarrollador Backend",
