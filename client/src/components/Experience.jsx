@@ -1,82 +1,141 @@
-const experiences = [
-  // {
-  //   title: 'Desarrollador Full Stack',
-  //   company: 'AleHoSeaokStore E-Commerce',
-  //   period: 'November 2023 - Presente',
-  //   description: 'Desarrollo de un e-commerce web utilizando React y Django. Implementación de APIs RESTful y optimización de rendimiento.',
-  //   tech: ['Python', 'Django', 'ReactJs'],
-  //   url: 'https://www.google.com',
-  //   urlGit: ''
-  // },
-  // {
-  //   title: 'Desarrollador Frontend',
-  //   company: 'Creative Web Solutions',
-  //   period: 'Junio 2019 - Diciembre 2020',
-  //   description: 'Creación de interfaces de usuario responsivas y accesibles utilizando React y Next.js.',
-  //   tech: ['Python', 'Django'],
-  //   url: 'google.com',
-  //   urlGit: 'github.com'
-  // },
-  {
-    title: 'Desarrollador Móvil - En la actualidad',
-    company: 'Coordinación de Modernización Administrativa e Innovación Gubernamental (CGMAIG)',
-    period: 'May-15 / ~',
-    description: 'Trabajé en el desarrollo de aplicaciones móviles para el estado de Tabasco, principalmente en ABIM Tabasco, una aplicación para mantener un registro de los bienes muebles de las dependencias gubernamentales. Además de presentar una propuesta visual nueva para la nueva interfaz actualmente utilizada.',
-    tech: ['React Native', 'Node Js'],
-    url: '',
-    urlGit: ''
-  },
-  {
-    title: 'Desarrollador Backend',
-    company: 'Universidad Juárez Autónoma de Tabasco',
-    period: 'Nov-23 / Abr-24',
-    description: 'Colaboré en el desarrollo y mantenimiento de sitios web con herramientas modernas y APIs. Implementé adaptaciones en PHP, perfeccioné sistemas de API con Postman y optimicé la escalabilidad y seguridad del sistema.',
-    tech: ['PHP'],
-    url: '',
-    urlGit: ''
-  },
-  // {
-  //   title: 'Desarrollador FullStack',
-  //   company: 'Creative Web Solutions',
-  //   period: 'Junio 2019 - Diciembre 2020',
-  //   description: 'Creación de interfaces de usuario responsivas y accesibles utilizando React y Next.js.',
-  //   tech: ['Python', 'Django'],
-  //   url: 'google.com',
-  //   urlGit: 'github.com'
-  // },
-];
+import { Award, Zap } from "lucide-react";
 
+const experiences = [
+  {
+    title: "Desarrollador Móvil - En la actualidad",
+    company:
+      "Coordinación de Modernización Administrativa e Innovación Gubernamental (CGMAIG)",
+    period: "May-15 / ~",
+    description:
+      "Trabajé en el desarrollo de aplicaciones móviles para el estado de Tabasco, principalmente en ABIM Tabasco, una aplicación para mantener un registro de los bienes muebles de las dependencias gubernamentales. Además de presentar una propuesta visual nueva para la nueva interfaz actualmente utilizada.",
+    tech: ["React Native", "Node Js"],
+    achievements: [
+      "Diseñé e implementé una interfaz móvil moderna más intuitiva para ABIM Tabasco",
+      // "Integré funcionalidades de registro y consulta de bienes en tiempo real vía API segura",
+      "Aseguré compatibilidad y estabilidad en múltiples versiones de Android",
+      "Propuse mejoras visuales que fueron adoptadas como base para la versión oficial",
+      "Brindé soporte técnico post-despliegue y seguimiento de uso institucional",
+    ],
+  },
+  {
+    title: "Desarrollador Backend",
+    company: "Universidad Juárez Autónoma de Tabasco",
+    period: "Nov-23 / Abr-24",
+    description:
+      "Colaboré en el desarrollo y mantenimiento de sitios web con herramientas modernas y APIs. Implementé adaptaciones en PHP, perfeccioné sistemas de API con Postman y optimicé la escalabilidad y seguridad del sistema.",
+    tech: ["PHP"],
+    achievements: [
+      "Adapté módulos PHP legados para cumplir con nuevas políticas de escalabilidad",
+      "Documenté flujos de API en Postman y facilité pruebas automatizadas para QA",
+      // "Reduje tiempos de carga en sistemas web mediante refactorización estratégica",
+      "Mejoré seguridad en endpoints con control de acceso y sanitización de entradas",
+      // "Colaboré en tareas de mantenimiento preventivo y migración gradual de dependencias",
+    ],
+  },
+];
 
 export default function Experience() {
   return (
-    <section id="experiencia" className="py-20 animate-fade-in">
-      <h2 className="text-3xl font-bold mb-12 text-center">Experiencia</h2>
-      <div className="space-y-12">
-        {experiences.map((exp, index) => (
-          <div key={index} className="bg-card p-6 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105 animate-slide-up" style={{ animationDelay: `${index * 100}ms` }}>
-            <h3 className="text-xl font-semibold mb-2">{exp.company}</h3>
-            <p className="text-[#f0bf6c] mb-2">{exp.title}</p>
-            <p className="text-sm mb-4">{exp.period}</p>
-            <p>{exp.description}</p>
-            <div className="flex gap-5 py-4">
-              {exp.tech.map((tech, techIndex) => (
-                <p className="py-1 px-3 rounded-full bg-gray-800" key={techIndex}>
-                  {tech}
-                </p>
+    <section id="experience" className="py-20">
+      <div className="container mx-auto px-4">
+        <div className="max-w-6xl mx-auto">
+          <Header />
+          <div className="relative">
+            <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-secondary/30" />
+            <div className="space-y-12">
+              {experiences.map((exp, index) => (
+                <ExperienceCard key={index} exp={exp} index={index} />
               ))}
             </div>
-            <div className="flex mt-3 gap-5">
-              {exp.url !== '' && (
-                <a href={exp.url} className="flex items-center text-[#f0bf6c] hover:underline">See project</a>
-
-              )}
-              {exp.urlGit !== '' && (
-                <a href={exp.urlGit} className="flex items-center text-[#f0bf6c] hover:underline">See GitHub</a>
-              )}
-            </div>
           </div>
-        ))}
+        </div>
       </div>
     </section>
-  )
+  );
+}
+
+function Header() {
+  return (
+    <div className="text-center mb-16 animate-fade-in">
+      <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+        Experiencia Profesional
+      </h2>
+      <div className="w-24 h-1 bg-secondary mx-auto mb-4" />
+      <p className="text-lg text-primary/70">Mi trayectoria profesional</p>
+    </div>
+  );
+}
+
+function ExperienceCard({ exp, index }) {
+  const isLeft = index % 2 !== 0;
+
+  return (
+    <div
+      className={`relative animate-slide-up ${
+        isLeft ? "md:text-left md:pl-8" : "md:text-right md:pr-8"
+      }`}
+      style={{ animationDelay: `${index * 0.2}s` }}
+    >
+      <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-secondary rounded-full border-4 border-tertiary shadow-lg animate-pulse-slow" />
+
+      <Card
+        className={`ml-12 md:ml-0 border-primary/10 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-2 ${
+          isLeft ? "md:ml-8" : "md:mr-8"
+        }`}
+      >
+        <CardHeader>
+          <CardTitle>{exp.title}</CardTitle>
+          <CardDescription>{exp.company}</CardDescription>
+          <Badge>{exp.period}</Badge>
+        </CardHeader>
+
+        <CardContent>
+          <p className="text-primary/80 mb-4">{exp.description}</p>
+          <div className="space-y-2">
+            <h4 className="font-semibold text-primary flex items-center">
+              <Award className="w-4 h-4 mr-2 text-secondary" />
+              Logros principales
+            </h4>
+            <ul className="list-disc list-inside space-y-1 text-primary/70">
+              {exp.achievements.map((item, i) => (
+                <li key={i} className="flex items-start">
+                  <Zap className="w-3 h-3 mr-2 mt-1 text-secondary flex-shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </CardContent>
+      </Card>
+    </div>
+  );
+}
+
+// Componentes base
+export function Card({ children, className }) {
+  return <div className={`rounded-lg shadow-lg p-4 bg-tertiary ${className}`}>{children}</div>;
+}
+
+export function CardContent({ children }) {
+  return <div className="text-primary">{children}</div>;
+}
+
+export function CardHeader({ children }) {
+  return <div className="mb-4">{children}</div>;
+}
+
+export function CardTitle({ children }) {
+  return <h3 className="text-xl font-semibold text-primary">{children}</h3>;
+}
+
+export function CardDescription({ children }) {
+  return <p className="text-lg text-secondary">{children}</p>;
+}
+
+export function Badge({ children }) {
+  return (
+    <div className="inline-flex items-center gap-2 px-4 py-1 border-2 border-secondary text-primary rounded-full text-sm font-medium shadow hover:scale-105 transition-all duration-300 mt-2">
+      {children}
+    </div>
+  );
 }

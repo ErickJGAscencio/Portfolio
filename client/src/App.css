@@ -1,4 +1,4 @@
-@tailwind base;
+/* @tailwind base; */
 @tailwind components;
 @tailwind utilities;
 
@@ -18,11 +18,11 @@
 
 
 
-@layer base {
+/* @layer base {
   body {
     @apply bg-background text-foreground transition-colors duration-300;
   }
-}
+} */
 
 @layer utilities {
   .animate-fade-in {
@@ -52,7 +52,7 @@ html {
   width: 10px;
 }
 
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
   @apply bg-background;
 }
 
@@ -63,4 +63,4 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   @apply bg-accent/80;
 }
-
+ */
