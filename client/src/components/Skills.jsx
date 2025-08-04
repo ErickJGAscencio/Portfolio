@@ -7,8 +7,7 @@ import {
 
 
 export default function Skills() {
-  return (
-    <section id="skills" className="py-20">
+  return <section id="skills" className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16 animate-fade-in">
@@ -242,5 +241,4 @@ export default function Skills() {
           </div>
         </div>
       </section>
-  );
 }

@@ -5,7 +5,7 @@ const experiences = [
     title: "Desarrollador Móvil - En la actualidad",
     company:
       "Coordinación de Modernización Administrativa e Innovación Gubernamental (CGMAIG)",
-    period: "May-15 / ~",
+    period: "May-25 / ~",
     description:
       "Trabajé en el desarrollo de aplicaciones móviles para el estado de Tabasco, principalmente en ABIM Tabasco, una aplicación para mantener un registro de los bienes muebles de las dependencias gubernamentales. Además de presentar una propuesta visual nueva para la nueva interfaz actualmente utilizada.",
     tech: ["React Native", "Node Js"],
