@@ -2,6 +2,9 @@ import React from "react";
 import { FolderOpen, Mail, ChevronDown } from "lucide-react";
 
 export default function PersonalInfo() {
+  function scrollToSection(id) {
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  }
   return (
     <section
       id="hero"
@@ -32,32 +35,35 @@ export default function PersonalInfo() {
             Desarrollador Web y Móvil
           </p>
           <div
-              className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up"
-              style={{ animationDelay: "0.4s" }}
+            className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up"
+            style={{ animationDelay: "0.4s" }}
+          >
+            <button
+              size="lg"
+              className="bg-secondary text-primary flex px-4 w-40 justify-center rounded-full py-1 hover:bg-secondary/90 transform hover:scale-105 transition-all duration-300"
+              onClick={() => scrollToSection("projects")}
             >
-              <button
-                size="lg"
-                className="bg-secondary text-primary flex px-4 w-40 justify-center rounded-full py-1 hover:bg-secondary/90 transform hover:scale-105 transition-all duration-300"
-                onClick={() => scrollToSection("projects")}
-              >
-                <FolderOpen className="w-5 h-5 mr-2" />
-                Ver Proyectos
-              </button>
-              <button
-                variant="outline"
-                size="lg"
-                className="bg-secondary text-primary flex px-4 w-40 justify-center rounded-full py-1 hover:bg-secondary/90 transform hover:scale-105 transition-all duration-300"
-                onClick={() => scrollToSection("contact")}
-              >
-                <Mail className="w-5 h-5 mr-2" />
-                Contactar
-              </button>
-            </div>
+              <FolderOpen className="w-5 h-5 mr-2" />
+              Ver Proyectos
+            </button>
+            <button
+              variant="outline"
+              size="lg"
+              className="bg-secondary text-primary flex px-4 w-40 justify-center rounded-full py-1 hover:bg-secondary/90 transform hover:scale-105 transition-all duration-300"
+              onClick={() => scrollToSection("contact")}
+            >
+              <Mail className="w-5 h-5 mr-2" />
+              Contactar
+            </button>
+          </div>
         </div>
       </div>
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
-          <ChevronDown className="w-8 h-8 text-secondary cursor-pointer" onClick={() => scrollToSection("about")} />
-        </div>
-      </section>
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
+        <ChevronDown
+          className="w-8 h-8 text-secondary cursor-pointer"
+          onClick={() => scrollToSection("about")}
+        />
+      </div>
+    </section>
   );
 }

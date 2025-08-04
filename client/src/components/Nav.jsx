@@ -19,11 +19,12 @@ const navItems = [
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            console.log("Id de opcion seleccionado: ", entry.target.id);
             setActiveSection(entry.target.id)
           }
         })
       },
-      { threshold: 0.5 },
+      { threshold: 0.4 },
     )
 
     navItems.forEach(({ id }) => {
@@ -37,6 +38,7 @@ const navItems = [
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" })
   }
+
   return (
     <nav className="fixed top-1/2 right-6 transform -translate-y-1/2 z-50 hidden lg:block">
       <div className="bg-tertiary/90 backdrop-blur-sm rounded-full p-2 shadow-lg border border-primary/10">
@@ -46,8 +48,8 @@ const navItems = [
               key={id}
               variant="ghost"
               size="sm"
-              onClick={() => scrollToSection(id)}
-              className={`w-12 h-12 rounded-full transition-all duration-300 group relative ${
+              onClick={() => {scrollToSection(id), console.log("Presionando ", {label}, "con id: ", id)}}
+              className={`flex justify-center items-center w-12 h-12 rounded-full transition-all duration-300 group relative ${
                 activeSection === id
                   ? "bg-secondary text-primary shadow-md"
                   : "text-primary/60 hover:text-primary hover:bg-secondary/20"

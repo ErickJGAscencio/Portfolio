@@ -60,7 +60,8 @@ function HeaderSection() {
 function CardProject({ project, index }) {
   return (
     <Card
-      className={`group overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 animate-slide-up ${
+      className={`group overflow-hidden hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-4 animate-slide-up 
+        ${
         project.featured ? "md:col-span-2 lg:col-span-1" : ""
       }`}
       style={{ animationDelay: `${index * 0.1}s` }}

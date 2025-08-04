@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../components/Header";
+import Nav from "../components/Nav";
 import PersonalInfo from "../components/PersonalInfo";
 import AboutMe from "../components/AboutMe";
 import Skills from "../components/Skills";
@@ -10,7 +10,7 @@ import Contact from "../components/Contact";
 export default function Portfolio() {
   return (
     <div className="min-h-screen bg-tertiary">
-      <Header />
+      <Nav />
       {/* <main className="container mx-auto px-4 py-8"> */}
       <PersonalInfo />
       <AboutMe />
